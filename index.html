@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="main_div">
+        <div class="shape">
+            <div class="cover">
+                <img src="images/me.png" alt="">
+                <i class="fa fa-calculator" aria-hidden="true"></i>
+                <h4>CALCULATOR</h4>
+                <p>excellent code with aj</p>
+            </div>
+        <div class="calcy">
+            <form action="" name="forms">
+                <div class="screen">
+                    <input type="text" name="screen" placeholder="00">
+                </div>
+                <div class="btns">
+                    <input type="button" value="DEL" class="bcode del" onclick="forms.screen.value = ''">
+                    <input type="button" value="0" class="bcode" onclick="forms.screen.value += '0'">
+                    <input type="button" value="=" class="bcode" onclick="forms.screen.value = eval(forms.screen.value)">
+                    <input type="button" value="+" class="bcode" onclick="forms.screen.value += '+'">
+                    <br>
+                    <input type="button" value="7" class="bcode" onclick="forms.screen.value += '7'">
+                    <input type="button" value="8" class="bcode" onclick="forms.screen.value += '8'">
+                    <input type="button" value="9" class="bcode" onclick="forms.screen.value += '9'">
+                    <input type="button" value="-" class="bcode" onclick="forms.screen.value += '-'">
+                    <br>
+                    <input type="button" value="4" class="bcode" onclick="forms.screen.value += '4'">
+                    <input type="button" value="5" class="bcode" onclick="forms.screen.value += '5'">
+                    <input type="button" value="6" class="bcode" onclick="forms.screen.value += '6'">
+                    <input type="button" value="x" class="bcode" onclick="forms.screen.value += '*'">
+                    <br>
+                    <input type="button" value="1" class="bcode" onclick="forms.screen.value += '1'">
+                    <input type="button" value="2" class="bcode" onclick="forms.screen.value += '2'">
+                    <input type="button" value="3" class="bcode" onclick="forms.screen.value += '3'">
+                    <input type="button" value="/" class="bcode" onclick="forms.screen.value += '/'">
+                </div>
+            </form> 
+        </div>
+        </div>
+    </div>
+    <script src="vanilla-tilt.js"></script>
+    <script>
+        	VanillaTilt.init(document.querySelector(".shape"), {
+		max: 25,
+		speed: 300,
+        glare:true
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
+</body>
+</html>
